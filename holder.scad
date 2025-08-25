@@ -32,8 +32,8 @@ module clamp_positive(first_half = true) {
         // lock
         translate([- (bar_radius + clamp_thickness + sqrt(2) * clamp_thickness), -clamp_lock_thickness, clamp_height / 2])rotate([0, 45, 0])cube([clamp_lock_width, clamp_lock_thickness, clamp_lock_width]);
         // connector
-        translate([-.25 * clamp_thickness, -(bar_radius + clamp_thickness + .7 * clamp_thickness), 0])cube([.5 * clamp_thickness, .8 * clamp_thickness, clamp_height]); 
-        translate([-.5 * clamp_thickness, -(bar_radius + clamp_thickness + clamp_thickness), 0])cube([clamp_thickness, .5 * clamp_thickness, clamp_height]); 
+        translate([-.5 * clamp_thickness, -(bar_radius + clamp_thickness + 1.9 * clamp_thickness), clamp_height / 2 - .5 * clamp_thickness])rotate([-45, 0, 0])cube([clamp_thickness, 3 * clamp_thickness, clamp_thickness]); 
+        translate([0, -(bar_radius + clamp_thickness + 1.5 * clamp_thickness), clamp_height / 2])sphere(r = clamp_thickness);
     } else {
         // hinge
 //        translate([hinge_position_x, 0, (clamp_height - hinge_height) / 2 + hinge_height / 4])cylinder(h = hinge_height / 2, r = hinge_radius);
